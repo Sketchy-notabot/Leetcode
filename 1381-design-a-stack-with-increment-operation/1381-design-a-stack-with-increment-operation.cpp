@@ -1,17 +1,17 @@
 class CustomStack {
 public:
     int capacity, size;
-    vector<int> stack;
+    int *stack;
     CustomStack(int maxSize) {
         capacity = maxSize;
         size = 0;
-        stack.reserve(capacity);
+        stack = new int[capacity];
     }
     
     void push(int x) {
         if(size<capacity){
+            stack[size]=x;
             size++;
-            stack.push_back(x);
         }
     }
     
@@ -20,7 +20,6 @@ public:
             return -1;
         else{
             int temp = stack[size-1];
-            stack.pop_back();
             size--;
             return temp;
         }
