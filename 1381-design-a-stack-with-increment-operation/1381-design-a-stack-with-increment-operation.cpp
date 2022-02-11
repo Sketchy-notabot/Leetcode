@@ -19,9 +19,8 @@ public:
         if(size==0)
             return -1;
         else{
-            int temp = stack[size-1];
             size--;
-            return temp;
+            return stack[size];
         }
     }
     
