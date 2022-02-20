@@ -27,7 +27,9 @@ public:
                 } 
                 num=0;
             }
+            ListNode* temp = head;
             head=head->next;
+            delete temp;
         }
         return newHead;
     }
